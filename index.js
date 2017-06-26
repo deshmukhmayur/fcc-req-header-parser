@@ -6,18 +6,21 @@ var app = express();
 
 env(__dirname + '/.env');
 
+// enabling trusted proxy for ip address
+app.enable('trust proxy');
+
 // to prettify JSON output
 app.set('json spaces', 40);
+
 
 // routes
 app.get('/', function(req, res) {
   // console.log(req.connection);
-  var data = {
-    ipaddress: req.headers.host.split(':')[0],    // or req.connection.remoteAddress
-    language: req.headers['accept-language'].split(',')[0],
-    software: req.headers['user-agent'].match(/\((.)*?\)/)[0].slice(1,-1)
-  }
-  res.json(data);
+  res.json({
+    'ipaddress': req.ip,
+    'language': req.headers['accept-language'].split(',')[0],
+    'software': req.headers['user-agent'].match(/\((.)*?\)/)[0].slice(1,-1)
+  });
 });
 
 
