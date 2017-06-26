@@ -1,0 +1,31 @@
+{
+  "name": "fcc-req-header-parser",
+  "version": "1.0.0",
+  "description": "Request Header Parser Microservice - freeCodeCamp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deshmukhmayur/fcc-req-header-parser.git"
+  },
+  "keywords": [
+    "freCodeCamp",
+    "back-end",
+    "JSON-API",
+    "node",
+    "express"
+  ],
+  "author": "Mayur Deshmukh <deshmukhmayur@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deshmukhmayur/fcc-req-header-parser/issues"
+  },
+  "homepage": "https://github.com/deshmukhmayur/fcc-req-header-parser#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "node-env-file": "^0.1.8"
+  }
+}
